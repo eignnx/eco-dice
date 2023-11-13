@@ -16,16 +16,24 @@ function PopDisplay({ name, namePlural=`${name}s`, population, setPopulation, ma
 
     switch (data.symbol) {
       case SYMBOLS.hunt: {
-        setPopulation(population - 1);
+        if (energy <= 0 || population <= 0) { return }
         setEnergy(energy - 1);
+        setPopulation(population - 1);
         break;
       }
       case SYMBOLS.grow: {
+        if (energy <= 0) { return }
+        setEnergy(energy - 1);
         setPopulation(population + 1);
         break;
       }
       case SYMBOLS.rest: {
         setEnergy(energy + 1);
+        break;
+      }
+      case SYMBOLS.hide: {
+        if (energy <= 0) { return }
+        setEnergy(energy - 1);
         break;
       }
     }
@@ -52,11 +60,11 @@ function PopDisplay({ name, namePlural=`${name}s`, population, setPopulation, ma
 function displayEnergy(energy) {
   const e = "⚡"
   if (energy <= 0) {
-    return "0"
+    return `0×${e}`
   } else if (energy <= 4) {
     return e.repeat(energy)
   } else {
-    return `${e}x${energy}`
+    return `${energy}×${e}`
   }
 }
 
