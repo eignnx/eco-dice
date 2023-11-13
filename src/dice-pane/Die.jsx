@@ -3,11 +3,12 @@ import './Die.css';
 import RollResults from './RollResults.jsx'
 
 
-export function Die({faces, selectedIdx=null, kept, spendableResources}) {
+export function Die({dieIdx, faces, selectedIdx=null, kept, spendableResources}) {
   const selectedFace = selectedIdx !== null ? faces[selectedIdx] : "";
   return (
     <div className="die-and-rolled-face">
       <RollResults
+        dieIdx={dieIdx}
         selectedFace={selectedFace}
         selectedIdx={selectedIdx}
         kept={kept}

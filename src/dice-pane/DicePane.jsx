@@ -51,9 +51,9 @@ function DicePane({spendableResources, setSpendableResources}) {
 
   function keep() {
     setKept(true)
-    setSpendableResources(
-      dice.map(die => [...die.faces[die.selectedIdx].symbols].flat())
-    )
+    const newResources = dice.map(die => [...die.faces[die.selectedIdx].symbols]);
+    console.log("SPENDABLE RESOURCES: %s", JSON.stringify(newResources))
+    setSpendableResources(newResources)
   }
 
   return (
@@ -63,6 +63,7 @@ function DicePane({spendableResources, setSpendableResources}) {
         {dice.map((d, idx) => (
           <Die
             key={idx}
+            dieIdx={idx}
             faces={d.faces}
             selectedIdx={d.selectedIdx}
             kept={kept}

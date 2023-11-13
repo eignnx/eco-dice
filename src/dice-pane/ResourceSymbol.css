@@ -2,8 +2,11 @@
   opacity: 0.5;
 }
 
-.kept-symbol {
+* {
   --fill: #fadf63;
+}
+
+.kept-symbol {
   text-shadow: 0.5ch 0.5ch 0.5ch #dd9c84;
   display: inline;
   border-radius: 8px;
@@ -15,11 +18,15 @@
   border: 3px solid var(--fill);
 }
 
-.kept-symbol:hover:not(:disabled) {
+.kept-symbol:hover:not(.spent-resource-symbol) {
   border: 3px dashed white;
   cursor: grab;
 }
 
-.kept-symbol:active:not(:disabled) {
+.kept-symbol:active:not(.spent-resource-symbol) {
   cursor: grabbing;
+}
+
+.kept-symbol:hover:disabled {
+  border: 3px solid var(--fill);
 }

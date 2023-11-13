@@ -25,9 +25,10 @@ export default function App() {
     setPopulations(newPopulations);
   }
 
-  function spendResource(resourceIdx) {
-    const newSpendableResources = [...spendableResources];
-    newSpendableResources[resourceIdx] = "spent";
+  function spendResource(dieIdx, resourceIdx) {
+    const newSpendableResources = spendableResources.map(die => [...die])
+    newSpendableResources[dieIdx][resourceIdx] = "spent";
+    console.log("newSpendableResources: ", JSON.stringify(newSpendableResources))
     setSpendableResources(newSpendableResources);
   }
   

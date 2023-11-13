@@ -2,7 +2,7 @@ import './RollResults.css'
 import { DieFace } from './Die.jsx'
 import ResourceSymbol from './ResourceSymbol.jsx'
 
-function RollResults({selectedFace, selectedIdx, kept, spendableResources}) {
+function RollResults({dieIdx, selectedFace, selectedIdx, kept, spendableResources}) {
   
   return (
       !kept ? (
@@ -14,10 +14,10 @@ function RollResults({selectedFace, selectedIdx, kept, spendableResources}) {
           {[...selectedFace.symbols].map((symbol, idx) => (
             <ResourceSymbol
               key={idx}
+              dieIdx={dieIdx}
               resourceIdx={idx}
               symbol={symbol}
-              spent={spendableResources[idx] === "spent"}
-              use={() => spendResource(idx)}
+              spent={spendableResources[dieIdx][idx] === "spent"}
             />
           ))}
         </div>

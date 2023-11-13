@@ -12,28 +12,37 @@ function PopDisplay({ name, namePlural=`${name}s`, population, setPopulation, ma
     console.log(`${namePlural} got %o`, data);
     e.preventDefault();
 
-    spendResource(data.resourceIdx);
+    const { symbol, resourceIdx, dieIdx } = data;
 
-    switch (data.symbol) {
+    function spend() {
+      console.log(`spending resource ${dieIdx} ${resourceIdx}:${symbol}`)
+      spendResource(dieIdx, resourceIdx);
+    }
+
+    switch (symbol) {
       case SYMBOLS.hunt: {
         if (energy <= 0 || population <= 0) { return }
         setEnergy(energy - 1);
         setPopulation(population - 1);
+        spend();
         break;
       }
       case SYMBOLS.grow: {
         if (energy <= 0) { return }
         setEnergy(energy - 1);
         setPopulation(population + 1);
+        spend();
         break;
       }
       case SYMBOLS.rest: {
         setEnergy(energy + 1);
+        spend();
         break;
       }
       case SYMBOLS.hide: {
         if (energy <= 0) { return }
         setEnergy(energy - 1);
+        spend();
         break;
       }
     }
