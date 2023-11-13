@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
 import PopDisplay from './PopDisplay.jsx'
-import DicePane from './DicePane.jsx'
+import DicePane from './dice-pane/DicePane.jsx'
 
 const INIT_POPULATIONS = [
   { name: "Fox", namePlural: "Foxes", population: 2, maxPop: 5, energy: 4 },

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Die } from './Die';
-import { randomNat } from "./utils.js"
+import { randomNat } from "../utils.js"
 import './DicePane.css'
 import RollControls from './RollControls.jsx'
-import { SYMBOLS } from './symbols.js'
+import { SYMBOLS } from '../symbols.js'
 
 const randomSymbols = (symbolObj, maxSyms = 4) => {
   const keys = Object.keys(symbolObj);
