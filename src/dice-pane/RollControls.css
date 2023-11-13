@@ -20,20 +20,24 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  transition-property: transform;
+  transition-duration: 20ms;
+  transition-timing-function: ease-out;
 }
 
-.roll-btn:hover {
+.roll-btn:hover:not(:disabled) {
+  transform: scale(1.1);
   background-color: #8acc8c;
 }
 
-.roll-btn:active {
-  animation-name: bloop;
-  animation-timing-function: ease-out;
-  animation-duration: 50ms;
+.roll-btn:active:not(:disabled) {
+  transform: scale(0.9);
 }
 
-@keyframes bloop {
-  to {
-    transform: scale(0.9);
-  }
+.roll-btn:disabled {
+  color: #5f5f5f;
+  background-color: #94a992;
 }
