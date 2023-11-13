@@ -1,3 +1,25 @@
 .spent-resource-symbol {
   opacity: 0.5;
 }
+
+.kept-symbol {
+  --fill: #fadf63;
+  text-shadow: 0.5ch 0.5ch 0.5ch #dd9c84;
+  display: inline;
+  border-radius: 8px;
+  background: var(--fill);
+  padding: 1ch;
+  margin: 1ch;
+  box-shadow: 5px 5px 10px #ffffff;
+  user-select: none;
+  border: 3px solid var(--fill);
+}
+
+.kept-symbol:hover:not(:disabled) {
+  border: 3px dashed white;
+  cursor: grab;
+}
+
+.kept-symbol:active:not(:disabled) {
+  cursor: grabbing;
+}

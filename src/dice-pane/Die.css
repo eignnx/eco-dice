@@ -27,6 +27,11 @@
   font-family: sans-serif;
 
   box-shadow: 5px 5px 15px #32271d;
+
+  font-size-adjust: 0.5;
+  letter-spacing: -0.2ch;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .selected-die-face {

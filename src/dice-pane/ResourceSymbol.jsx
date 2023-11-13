@@ -1,3 +1,4 @@
+import './ResourceSymbol.css'
 
 function ResourceSymbol({
   symbol,
