@@ -1,0 +1,32 @@
+#pop-display-container:dragover {
+  background: yellow;
+}
+
+#pop-display-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pop-display {
+  min-width: 8rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.pop-display {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pop-display .pop-size {
+  font-size: 30pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+.energy-display {
+  font-size: small;
+}

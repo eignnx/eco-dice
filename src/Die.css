@@ -1,0 +1,54 @@
+.die-and-rolled-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.die-faces {
+  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gridGap: 5px;
+}
+
+.die-face {
+  user-select: none;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #503f2e;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.1rem;
+  background-color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+
+  box-shadow: 5px 5px 15px #32271d;
+}
+
+.selected-die-face {
+  border: 4px solid #f4d006;
+  box-shadow: 5px 5px 25px #f4d006;
+}
+
+.die-rolled-face {
+  animation-duration: 3s;
+  animation-name: wobble;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: calc(-2);
+}
+
+@keyframes wobble {
+  from {
+    rotate: 10deg;
+  }
+
+  to {
+    rotate: -10deg;
+  }
+}
