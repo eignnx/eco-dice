@@ -57,7 +57,7 @@ function DicePane({spendableResources, setSpendableResources}) {
   }
 
   return (
-    <section>
+    <section id="dice-pane">
       <RollControls roll={roll} keep={keep} kept={kept}/>
       <div id="dice">
         {dice.map((d, idx) => (

@@ -10,7 +10,7 @@ function RollResults({selectedFace, selectedIdx, kept, spendableResources}) {
           <DieFace value={selectedFace} selected={selectedIdx !== null} />
         </div>
       ) : (
-        <div>
+        <div className="kept-symbols">
           {[...selectedFace.symbols].map((symbol, idx) => (
             <ResourceSymbol
               key={idx}

@@ -1,5 +1,13 @@
 #dice {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 0.5rem;
 }
 
+.die-and-rolled-face {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  grid-row: 1 / 3;
+}

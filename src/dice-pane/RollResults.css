@@ -1,0 +1,14 @@
+.kept-symbols {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-self: center;
+
+  background: rgba(255,255,255, 15%);
+  border: 4px solid rgba(255,255,255, 50%);
+  border-radius: 1rem;
+  margin-block: 1rem;
+}
+
+.kept-symbol {
+}
