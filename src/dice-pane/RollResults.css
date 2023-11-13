@@ -2,13 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  justify-self: center;
 
-  background: rgba(255,255,255, 15%);
-  border: 4px solid rgba(255,255,255, 50%);
+  background: rgba(255,255,255, 25%);
+  border: 4px solid rgba(255,255,255, 85%);
   border-radius: 1rem;
-  margin-block: 1rem;
-}
 
-.kept-symbol {
+  box-shadow: 0 0 10px white;
+
+  margin-block: 0.5rem;
+  margin-inline: 1rem;
+  padding: 0.3rem;
+  justify-content: center;
 }
