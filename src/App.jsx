@@ -3,11 +3,13 @@ import './App.css'
 import PopDisplay from './PopDisplay.jsx'
 import DicePane from './dice-pane/DicePane.jsx'
 
+
 const INIT_POPULATIONS = [
   { name: "Fox", namePlural: "Foxes", population: 2, maxPop: 5, energy: 4 },
   { name: "Rabbit", population: 6, maxPop: 9, energy: 5 },
   { name: "Grass", namePlural: "Grass", population: 8, maxPop: 12, energy: 2 },
 ]
+
 
 export default function App() {
   const [populations, setPopulations] = React.useState(INIT_POPULATIONS);
