@@ -36,3 +36,20 @@ modifies(reroll_activation, die_face).
 modifier_effectstage(reroll_activation, reroll).
 onstage_apply_modifier(reroll, reroll_activation, face(Syms), keep(Syms)).
 
+/*
+// grow
+if (energy <= 0) { return }
+setEnergy(energy - 1);
+setPopulation(population + 1);
+spend();
+*/
+
+apply_dieface(grow) -->
+  {
+    target(population(Pop)),
+    population_energy(Pop, E0),
+    E0 #> 0
+  },
+  change(Pop, population, P->P + 1),
+  change(Pop, energy, E -> E - 1).
+  

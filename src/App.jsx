@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import PopDisplay from './PopDisplay.jsx'
 import DicePane from './dice-pane/DicePane.jsx'
+import DiceProvider from './DiceProvider.jsx'
 
 
 const INIT_POPULATIONS = [
@@ -55,10 +56,12 @@ export default function App() {
       </section >
       
       <section >
-        <DicePane
-          spendableResources={spendableResources}
-          setSpendableResources={setSpendableResources}
-        />
+        <DiceProvider>
+          <DicePane
+            spendableResources={spendableResources}
+            setSpendableResources={setSpendableResources}
+          />
+        </DiceProvider>
       </section>
     </main>
   )
